@@ -9,7 +9,6 @@ import { myDocument, myschema } from './app.schema';
   imports: [
     ConfigModule.forRoot(),
     MongooseModule.forRoot(`mongodb+srv://${process.env.db_user}:${encodeURIComponent(process.env.db_password)}@atlascluster.rmnwsdf.mongodb.net/?retryWrites=true&w=majority`),
-    MongooseModule.forFeature([{name : myDocument.name, schema : myschema}])
   ],
   controllers: [AppController],
   providers: [AppService],
